@@ -12,17 +12,19 @@ export const IssuesContainer = styled.section`
 export const IssueList = styled.div`
     margin-top: 2.875rem;
 
+    width: 100%;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, calc(50% - 1rem));
     gap: 2rem;
 
     @media screen and (max-width: 768px) {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 100%
     }
 `
 
-export const CardIssue = styled.a`
+export const CardIssue = styled.div`
     background: ${props => props.theme["base-post"]};
     border-radius: 10px;
     padding: 2rem;
@@ -43,16 +45,18 @@ export const CardIssue = styled.a`
 export const CardIssueHeader = styled.header`
     display: flex;
     gap: 1rem;
+    height: 100%;
     align-items: flex-start;
+    justify-content: space-between;
 
-    > h3 {
+    & > h3 {
         color: ${props => props.theme["base-title"]};
         font-weight: bold;
         font-size: 1.25rem;
         text-transform: none;       
     }
 
-    > span {
+    & > span {
        font-size: 0.875rem;
        font-weight: 400;
        color: ${props => props.theme["base-span"]};
@@ -61,7 +65,7 @@ export const CardIssueHeader = styled.header`
 `
 
 export const CardText = styled.div`
-    p {
+    .issue-body {
         color: ${props => props.theme["base-text"]};
         display: -webkit-box;
         -webkit-box-orient: vertical;

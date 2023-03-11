@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
-    a {
+    /* a {
         font-weight: bold;
         font-size: 0.75rem;
         text-transform: uppercase;
@@ -32,11 +32,13 @@ export const GlobalStyle = createGlobalStyle`
 
         border-bottom: 1px solid transparent;
 
+        cursor: pointer;
+
         &:hover {
             border-bottom: 1px solid ${props => props.theme.blue};
             transition: border-color 0.5s;
         }
-    }
+    } */
 
     body, input, textarea, button {
         font-family: 'Nunito', sans-serif;

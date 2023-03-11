@@ -18,10 +18,10 @@ export function Profile() {
                     <ProfileInfoHeader>
                         <h2>{user.name}</h2>
                         
-                        <a href={user.profile_url}>
+                        <a href={user.profile_url} target="_blank">
                             github
                             <FontAwesomeIcon 
-                            icon={faArrowUpRightFromSquare}
+                                icon={faArrowUpRightFromSquare}
                             />
                         </a>
                     </ProfileInfoHeader>
